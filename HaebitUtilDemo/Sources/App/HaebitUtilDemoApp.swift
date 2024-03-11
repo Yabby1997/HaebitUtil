@@ -12,7 +12,7 @@ import SwiftUI
 struct ObscuraDemoApp: App {
     var body: some Scene {
         WindowGroup {
-            Text("HelloWorld")
+            DateFormatterDemoView()
         }
     }
 }
