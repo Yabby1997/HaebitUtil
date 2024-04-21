@@ -8,7 +8,10 @@ let targets: [Target] = [
         bundleId: "com.seunghun.haebitutil",
         deploymentTarget: .iOS(targetVersion: "16.0", devices: [.iphone]),
         sources: ["HaebitUtil/Sources/**"],
-        dependencies: []
+        dependencies: [],
+        settings: .settings(
+            base: ["SWIFT_STRICT_CONCURRENCY": "complete"]
+        )
     ),
     Target(
         name: "HaebitUtilTests",
@@ -20,7 +23,10 @@ let targets: [Target] = [
             .target(name: "HaebitUtil")
         ],
         settings: .settings(
-            base: ["DEVELOPMENT_TEAM": "5HZQ3M82FA"],
+            base: [
+                "DEVELOPMENT_TEAM": "5HZQ3M82FA",
+                "SWIFT_STRICT_CONCURRENCY": "complete"
+            ],
             configurations: [],
             defaultSettings: .recommended
         )
@@ -40,7 +46,10 @@ let targets: [Target] = [
             .target(name: "HaebitUtil")
         ],
         settings: .settings(
-            base: ["DEVELOPMENT_TEAM": "5HZQ3M82FA"],
+            base: [
+                "DEVELOPMENT_TEAM": "5HZQ3M82FA",
+                "SWIFT_STRICT_CONCURRENCY": "complete"
+            ],
             configurations: [],
             defaultSettings: .recommended
         )
